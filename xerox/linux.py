@@ -11,7 +11,7 @@ def copy(string):
     """Copy given string into system clipboard."""
     try:
         _cmd = ["xclip", "-selection", "clipboard"]
-        subprocess.Popen(_cmd, stdin=subprocess.PIPE).communicate(str(unicode(string)))
+        subprocess.Popen(_cmd, stdin=subprocess.PIPE).communicate(unicode(string))
         return
     except Exception, why:
         raise XclipNotFound
