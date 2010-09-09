@@ -17,8 +17,8 @@ if sys.argv[-1] == "publish":
     sys.exit()
 
 setup(name='xerox',
-      version='0.2.0',
-      description='Python wrapper for Gist API',
+      version='0.2.1',
+      description='Simple Copy + Paste in Python.',
       long_description=open('README.rst').read(),
       author='Kenneth Reitz',
       author_email='me@kennethreitz.com',
