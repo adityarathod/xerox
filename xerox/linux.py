@@ -4,7 +4,7 @@
 """
 
 import subprocess
-from base import *
+from .base import *
 
 
 def copy(string):

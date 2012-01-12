@@ -7,7 +7,7 @@
 import subprocess
 import commands
 
-from base import *
+from .base import *
 
 
 def copy(string):
