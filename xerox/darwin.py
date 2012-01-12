@@ -5,7 +5,6 @@
 
 
 import subprocess
-import commands
 
 from .base import *
 
@@ -23,7 +22,7 @@ def copy(string):
 def paste():
     """Returns system clipboard contents."""
     try:
-        return unicode(commands.getoutput('pbpaste'))
+        return unicode(subprocess.check_output('pbpaste'))
     except OSError as why:
         raise XcodeNotFound
     
