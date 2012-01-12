@@ -14,7 +14,7 @@ def copy(string):
     """Copy given string into system clipboard."""
     try:
         subprocess.Popen(['pbcopy'], stdin=subprocess.PIPE).communicate(str(unicode(string)))
-    except Exception, why:
+    except Exception as why:
         raise XcodeNotFound
     
     return
@@ -24,6 +24,6 @@ def paste():
     """Returns system clipboard contents."""
     try:
         return unicode(commands.getoutput('pbpaste'))
-    except Exception, why:
+    except Exception as why:
         raise XcodeNotFound
     

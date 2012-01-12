@@ -13,13 +13,13 @@ def copy(string):
         _cmd = ["xclip", "-selection", "clipboard"]
         subprocess.Popen(_cmd, stdin=subprocess.PIPE).communicate(unicode(string))
         return
-    except Exception, why:
+    except Exception as why:
         raise XclipNotFound
     
 def paste():
     """Returns system clipboard contents."""
     try:
         return unicode(subprocess.Popen(["xclip", "-selection", "clipboard", "-o"], stdout=subprocess.PIPE).communicate()[0])
-    except Exception, why:
+    except Exception as why:
         raise XclipNotFound
 
