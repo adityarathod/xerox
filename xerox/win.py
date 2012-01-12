@@ -3,7 +3,7 @@
 
 # found @ http://code.activestate.com/recipes/150115/
 
-from base import * 
+from .base import * 
 
 try:
     import win32clipboard as clip

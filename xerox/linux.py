@@ -4,22 +4,23 @@
 """
 
 import subprocess
-from base import *
+from .base import *
 
 
 def copy(string):
     """Copy given string into system clipboard."""
     try:
         _cmd = ["xclip", "-selection", "clipboard"]
-        subprocess.Popen(_cmd, stdin=subprocess.PIPE).communicate(unicode(string))
+        subprocess.Popen(_cmd, stdin=subprocess.PIPE).communicate(
+                string.encode('utf-8'))
         return
-    except Exception, why:
+    except OSError as why:
         raise XclipNotFound
     
 def paste():
     """Returns system clipboard contents."""
     try:
-        return unicode(subprocess.Popen(["xclip", "-selection", "clipboard", "-o"], stdout=subprocess.PIPE).communicate()[0])
-    except Exception, why:
+        return subprocess.Popen(["xclip", "-selection", "clipboard", "-o"], stdout=subprocess.PIPE).communicate()[0]).decode("utf-8")
+    except OSError as why:
         raise XclipNotFound
 
