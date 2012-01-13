@@ -20,7 +20,7 @@ def copy(string):
 def paste():
     """Returns system clipboard contents."""
     try:
-        return subprocess.Popen(["xclip", "-selection", "clipboard", "-o"], stdout=subprocess.PIPE).communicate()[0]).decode("utf-8")
+        return subprocess.Popen(["xclip", "-selection", "clipboard", "-o"], stdout=subprocess.PIPE).communicate()[0].decode("utf-8")
     except OSError as why:
         raise XclipNotFound
 
