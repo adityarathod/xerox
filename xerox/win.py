@@ -8,7 +8,7 @@ from .base import *
 try:
     import win32clipboard as clip
     import win32con
-except ImportError, why:
+except ImportError as why:
     raise Pywin32NotFound
 
 
