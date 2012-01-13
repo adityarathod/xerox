@@ -17,7 +17,7 @@ if sys.argv[-1] == "publish":
     sys.exit()
 
 setup(name='xerox',
-      version='0.2.1',
+      version='0.3.0',
       description='Simple Copy + Paste in Python.',
       long_description=open('README.rst').read(),
       author='Kenneth Reitz',
@@ -32,5 +32,8 @@ setup(name='xerox',
         "Programming Language :: Python :: 2.5",
         "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3.0",
+        "Programming Language :: Python :: 3.1",
+        "Programming Language :: Python :: 3.2"
         )
       )
