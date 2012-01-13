@@ -13,3 +13,6 @@ elif sys.platform == 'linux2':
     
 elif sys.platform == 'win32':
     from .win import *
+
+elif sys.platform == 'cli':
+    from .cli import *
