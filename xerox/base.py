@@ -17,3 +17,6 @@ class XclipNotFound(ToolNotFound):
        On Ubuntu,
        $ apt-get install xclip
     """
+class TkinterNotFound(ToolNotFound):
+    """Tkinter must be installed"""
+

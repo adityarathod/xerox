@@ -12,7 +12,10 @@ elif sys.platform.startswith('linux'):
     from .linux import *
     
 elif sys.platform == 'win32':
-    from .win import *
+    try:
+        from .win import *
+    except:
+        from .tkinter import *
 
 elif sys.platform == 'cli':
     from .cli import *
