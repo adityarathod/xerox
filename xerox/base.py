@@ -5,7 +5,10 @@ class ToolNotFound(Exception):
     
 class Pywin32NotFound(ToolNotFound):
     """PyWin32 must be installed."""
-    
+
+class ClrNotFound(ToolNotFound):
+    """clr must be installed."""
+
 class XcodeNotFound(ToolNotFound):
     """xcode must be installed."""
 
