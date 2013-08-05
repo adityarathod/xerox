@@ -8,7 +8,7 @@ __license__ = 'MIT'
 if sys.platform == 'darwin':
     from .darwin import *
     
-elif sys.platform == 'linux2':
+elif sys.platform.startswith('linux'):
     from .linux import *
     
 elif sys.platform == 'win32':
