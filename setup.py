@@ -24,6 +24,7 @@ setup(name='xerox',
       author_email='me@kennethreitz.com',
       url='http://github.com/kennethreitz/xerox',
       packages=['xerox'],
+      scripts=['bin/xerox'],
       license='MIT',
       classifiers=(
         "Development Status :: 4 - Beta",
