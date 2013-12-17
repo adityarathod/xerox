@@ -17,7 +17,7 @@ def copy(string):
 
     clip.OpenClipboard()
     clip.EmptyClipboard()
-    clip.SetClipboardData(1, string) 
+    clip.SetClipboardData(win32con.CF_UNICODETEXT, string) 
     clip.CloseClipboard()
 
     return
