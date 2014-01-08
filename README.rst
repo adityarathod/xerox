@@ -21,6 +21,20 @@ And to paste: ::
 
 And, that's it.
 
+Command Line
+~~~~~~~~~~~~
+To copy: ::
+
+	xerox some string
+
+or: ::
+
+	echo some string | xerox
+
+To paste: ::
+
+	>>> xerox
+	some string
 
 Installation
 ------------

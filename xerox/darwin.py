@@ -16,14 +16,16 @@ def copy(string):
                 string.encode("utf-8"))
     except OSError as why:
         raise XcodeNotFound
-    
+
     return
-   
-    
+
+
 def paste():
     """Returns system clipboard contents."""
     try:
-        return subprocess.check_output('pbpaste').decode("utf-8")
+        return subprocess.Popen(
+            ['pbpaste'], stdout=subprocess.PIPE).communicate()[0].decode('utf-8')
+
     except OSError as why:
         raise XcodeNotFound
-    
+
