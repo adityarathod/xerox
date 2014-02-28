@@ -39,7 +39,7 @@ setup(name='xerox',
         "Programming Language :: Python :: 3.0",
         "Programming Language :: Python :: 3.1",
         "Programming Language :: Python :: 3.2",
-	"Programming Language :: Python :: Implementation :: CPython",
-	"Programming Language :: Python :: Implementation :: IronPython"
+        "Programming Language :: Python :: Implementation :: CPython",
+        "Programming Language :: Python :: Implementation :: IronPython"
         )
       )
