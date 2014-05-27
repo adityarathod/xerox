@@ -5,6 +5,7 @@
 
 
 import subprocess
+import os
 
 from .base import *
 
@@ -23,6 +24,9 @@ def copy(string):
 def paste():
     """Returns system clipboard contents."""
     try:
+        #Tell the IO system to decode IPC IO with utf-8,
+        #to prevent UnicodeDecodeErrors on python3
+        os.environ['LANG'] = 'en_US.utf-8'
         return subprocess.Popen(
             ['pbpaste'], stdout=subprocess.PIPE).communicate()[0].decode('utf-8')
 
