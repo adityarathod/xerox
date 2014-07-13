@@ -19,6 +19,16 @@ And to paste: ::
 	>>> xerox.paste()
 	u'some string'
 
+On Linux you can optionally also copy into the X selection clipboard for
+middle-click-paste capability: ::
+
+    xerox.copy(u'Some string', xsel=True)
+
+And you can choose to paste from the X selection rather than the system
+clipboard: ::
+
+    xerox.paste(xsel=True)
+
 And, that's it.
 
 Command Line

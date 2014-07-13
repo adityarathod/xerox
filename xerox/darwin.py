@@ -10,7 +10,7 @@ import os
 from .base import *
 
 
-def copy(string):
+def copy(string, **kwargs):
     """Copy given string into system clipboard."""
     try:
         subprocess.Popen(['pbcopy'], stdin=subprocess.PIPE).communicate(
@@ -20,8 +20,7 @@ def copy(string):
 
     return
 
-
-def paste():
+def paste(**kwargs):
     """Returns system clipboard contents."""
     try:
         #Tell the IO system to decode IPC IO with utf-8,
