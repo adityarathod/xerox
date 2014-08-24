@@ -27,7 +27,7 @@ def paste():
     """Returns system clipboard contents."""
 
     clip.OpenClipboard() 
-    d = clip.GetClipboardData(win32con.CF_TEXT) 
+    d = clip.GetClipboardData(win32con.CF_UNICODETEXT)
     clip.CloseClipboard() 
     return d 
 
