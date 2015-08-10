@@ -1,19 +1,24 @@
-os:
-  - linux
-  # - osx
 language: python
-python:
-  - "2.7"
-  - "3.4"
-  - "pypy"
+
+matrix:
+  include:
+    - python: 2.7
+    - python: 3.4
+    - python: pypy
+    # - language: generic
+    #   os: osx
+    #   env: PYTHON_VERSION=2.7.10
+    # - language: generic
+    #   os: osx
+    #   env: PYTHON_VERSION=3.4.3
 
 install:
-  - "sudo apt-get update -qq"
-  - "sudo apt-get install -qq xclip"
-  - "pip install --editable ."
+  - echo $TRAVIS_OS_NAME
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo apt-get update -qq; sudo apt-get install -qq xclip; pip install --editable .; fi
+  - if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew update; brew outdated pyenv || brew upgrade pyenv; brew install pyenv-virtualenv; eval "$(pyenv init -)"; pyenv install ${PYTHON_VERSION}; pyenv virtualenv ${PYTHON_VERSION} xerox; pyenv rehash; pyenv activate xerox; sudo pip install --editable .; fi
 
 before_install:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then export DISPLAY=:99.0; fi
+  - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sh -e /etc/init.d/xvfb start; fi
 
 script: python test_xerox.py
