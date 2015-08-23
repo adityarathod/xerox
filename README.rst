@@ -3,6 +3,9 @@ Xerox: Copy + Paste for Python
 
 *Xerox* is a copy + paste module for python. It's aim is simple: to be as incredibly simple as possible.
 
+.. image:: https://travis-ci.org/catch22/xerox.svg?branch=travis-ci
+    :target: https://travis-ci.org/catch22/xerox
+
 Supported platforms are currently OS X, Linux, and Windows.
 
 If you can make it simpler, please fork.
