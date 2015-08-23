@@ -33,6 +33,10 @@ class BasicAPITestCase(unittest.TestCase):
         self.assertIsInstance(got, str)
         self.assertEqual(got, self.text)
 
+    def test_no_unicode(self):
+        with self.assertRaises(ValueError):
+            xerox.copy(b'This is a byte string.')
+
 
 if __name__ == '__main__':
     unittest.main()

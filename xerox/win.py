@@ -3,6 +3,8 @@
 
 # found @ http://code.activestate.com/recipes/150115/
 
+import sys
+
 from .base import *
 
 try:
@@ -14,6 +16,9 @@ except ImportError as why:
 
 def copy(string):
     """Copy given string into system clipboard."""
+
+    if not isinstance(string, unicode_type):
+        raise ValueError('Expected unicode string, got bytes.')
 
     clip.OpenClipboard()
     clip.EmptyClipboard()
