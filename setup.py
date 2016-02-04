@@ -17,7 +17,7 @@ if sys.argv[-1] == "publish":
     sys.exit()
 
 setup(name='xerox',
-      version='0.4.0',
+      version='0.4.1',
       description='Simple Copy + Paste in Python.',
       long_description=open('README.rst').read(),
       author='Kenneth Reitz',
