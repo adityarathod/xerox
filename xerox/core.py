@@ -9,7 +9,10 @@ if sys.platform == 'darwin':
     from .darwin import *
 
 elif sys.platform == 'win32':
-    from .win import *
+    try:
+        from .win import *
+    except:
+        from .tkinter import *
 
 elif sys.platform == 'cli':
     from .cli import *
