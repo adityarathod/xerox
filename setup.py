@@ -17,7 +17,7 @@ if sys.argv[-1] == "publish":
     sys.exit()
 
 setup(name='xerox',
-      version='0.3.1',
+      version='0.4.0',
       description='Simple Copy + Paste in Python.',
       long_description=open('README.rst').read(),
       author='Kenneth Reitz',
@@ -34,11 +34,13 @@ setup(name='xerox',
         "Development Status :: 4 - Beta",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.0",
         "Programming Language :: Python :: 3.1",
         "Programming Language :: Python :: 3.2",
+        "Programming Language :: Python :: 3.3",
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: Implementation :: CPython",
         "Programming Language :: Python :: Implementation :: IronPython"
         )
