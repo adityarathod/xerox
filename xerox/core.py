@@ -11,7 +11,7 @@ if sys.platform == 'darwin':
 elif sys.platform == 'win32':
     try:
         from .win import *
-    except:
+    except ImportError:
         from .tkinter import *
 
 elif sys.platform == 'cli':
