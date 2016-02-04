@@ -51,7 +51,7 @@ To paste::
 Installation
 ------------
 
-To install Xerox, simply:
+To install Xerox, simply::
 
 	$ pip install xerox
 
