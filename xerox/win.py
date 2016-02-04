@@ -12,7 +12,7 @@ except ImportError as why:
     raise Pywin32NotFound
 
 
-def copy(string): 
+def copy(string, **kwargs):
     """Copy given string into system clipboard."""
 
     clip.OpenClipboard()
@@ -21,9 +21,8 @@ def copy(string):
     clip.CloseClipboard()
 
     return
-    
 
-def paste():
+def paste(**kwargs):
     """Returns system clipboard contents."""
 
     clip.OpenClipboard() 
