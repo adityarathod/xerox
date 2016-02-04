@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-""" Copy + Paste in Linux
+""" Copy + Paste in X11
 """
 
 import subprocess
