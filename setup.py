@@ -5,7 +5,7 @@ import os
 import sys
 import xerox
 
-from distutils.core import setup
+from setuptools import setup
 
 
 def publish():
