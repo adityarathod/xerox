@@ -64,6 +64,6 @@ Legal Stuff
 
 MIT License.
 
-(c\) 2012 Kenneth Reitz.
+(c\) 2016 Kenneth Reitz.
 
 .. _pywin32: http://sourceforge.net/projects/pywin32/files/
