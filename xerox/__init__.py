@@ -6,7 +6,7 @@ import stat
 
 def main():
     """ Entry point for cli. """
-    mode = os.fstat(0).st_mode
+    mode = os.fstat(sys.stdin.fileno()).st_mode
     if sys.argv[1:]:  # called with input arguments
         copy(' '.join(sys.argv[1:]))
     elif stat.S_ISFIFO(mode) or stat.S_ISREG(mode):  # piped in input
