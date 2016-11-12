@@ -26,7 +26,12 @@ def paste(**kwargs):
     """Returns system clipboard contents."""
 
     clip.OpenClipboard() 
-    d = clip.GetClipboardData(win32con.CF_UNICODETEXT)
+    try:
+        d = clip.GetClipboardData(win32con.CF_UNICODETEXT)
+    except TypeError:
+        # Handle, "Specified clipboard format is not available"
+        # Either clipboard is empty or does NOT contain text
+        d = ''
     clip.CloseClipboard() 
     return d 
 
