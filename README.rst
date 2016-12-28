@@ -40,7 +40,7 @@ To copy::
 
 or::
 
-	$ echo some string | xerox
+	$ echo -n some string | xerox
 
 To paste::
 
